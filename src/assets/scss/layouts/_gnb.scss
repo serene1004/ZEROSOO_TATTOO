@@ -1,0 +1,14 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin' as *;
+
+.gnb {
+    gap: 60px;
+    @include verticalCenter;
+    height: 24px;
+
+    &_item {
+        font-size: $fsz-small;
+        font-weight: 500;
+        @include lineAnimation(1);
+    }
+}

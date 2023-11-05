@@ -1,0 +1,21 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin' as *;
+
+.wrapper {
+    width: 100%;
+    color: $black;
+    font-size: $fsz-normal;
+    font-weight: 400;
+}
+
+.inner {
+    @include inner;
+}
+
+.blind {
+    @include blind;
+}
+
+.ellipsis {
+    @include ellipsis(1);
+}

@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block content %}
+    {% import '../templates/header.html' as nav %} {{nav.active('')}}
+    <main class="main">
+        <div class="page">
+            <section class="page_section page_visual">
+                <div class="inner">
+                    <h2>ARTIST<br>ZERO SOO<br>TATTOO</h2>
+
+                </div>
+            </section>
+            <section class="page_section page_portfolio">
+                <div class="inner">
+                    <h2>PORTFOLIO</h2>
+                </div>
+            </section>
+            <section class="page_section page_design">
+                <div class="inner">
+                    <h2>DESIGN</h2>
+                </div>
+            </section>
+            <section class="page_section page_about">
+                <div class="inner">
+                    <h2>MEET THE ARTIST</h2>
+                </div>
+            </section>
+        </div>
+    </main>
+    {% include '../templates/footer.html' %}
+{% endblock %}

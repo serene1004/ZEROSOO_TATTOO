@@ -1,0 +1,47 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin' as *;
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    background-color: $primary;
+    color: $white;
+    font-weight: 500;
+    line-height: 20px;
+
+    &:hover {
+        background-color: $primaryLight;
+    }
+
+    &.small {
+        min-width: 124px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: $fsz-small;
+    }
+
+    &.medium {
+        min-width: 320px;
+        height: 50px;
+        border-radius: 25px;
+        font-size: $fsz-normal;
+    }
+
+    &.large {
+        min-width: 460px;
+        height: 60px;
+        border-radius: 30px;
+        font-size: $fsz-medium;
+        font-weight: 700;
+    }
+
+    &.ic40 {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        @include btnStyle(40px, 50%);
+    }
+}

@@ -1,0 +1,36 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin' as *;
+
+.header {
+    position: relative;
+    z-index: 10;
+    height: 80px;
+    padding: 10px;
+    border-bottom: 1px solid #DFDFDF;
+
+    .inner {
+        justify-content: space-between;
+        @include verticalCenter;
+    }
+
+    .logo {
+        width: 120px;
+        height: 41px;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/logo.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    }
+
+    .contact {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}

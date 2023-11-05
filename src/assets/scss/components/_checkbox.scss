@@ -1,0 +1,75 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin' as *;
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    
+    input + label {
+        position: relative;
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        width: 22px;
+        height: 22px;
+        background: $white;
+        border: 1px solid $grayLight;
+        border-radius: 3px;
+        color: $grayDark;
+        font-size: $fsz-normal;
+        line-height: 22px;
+        text-indent: 28px;
+        white-space: nowrap;
+        transition: all 0.15s;
+        cursor: pointer;
+    
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            width: 18px;
+            height: 13px;
+            background-image: url(../images/ic_check.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    input:disabled + label {
+        background: $offWhite;
+        border-color: $offWhite;
+        opacity: 0.5;
+        cursor: default;
+    }
+    
+    input:checked + label {
+        background: $primary;
+        border-color: $primary;
+    
+        &::after {
+            transform: translate(-50%, -50%) scale(1);
+            animation: aniChecked 0.15s;
+        }
+    }
+
+    @keyframes aniChecked {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        75% {
+            transform: translate(-50%, -50%) scale(1.25);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    
+    input {
+        display: none;
+    }
+}

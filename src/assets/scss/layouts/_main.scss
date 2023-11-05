@@ -1,0 +1,18 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin' as *;
+
+.main {
+    position: relative;
+    min-height: calc(100vh - 230px);
+
+    .inner {
+        
+    }
+
+    h2 {
+        // font-size: 100px;
+        font-size: $fsz-title;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
