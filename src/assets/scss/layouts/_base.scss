@@ -6,6 +6,7 @@
     color: $black;
     font-size: $fsz-normal;
     font-weight: 400;
+    overflow-x: hidden;
 }
 
 .inner {
@@ -18,4 +19,13 @@
 
 .ellipsis {
     @include ellipsis(1);
+}
+
+.dot {
+    position: relative;
+
+    &::after {
+        content: '.';
+        color: $primary;
+    }
 }

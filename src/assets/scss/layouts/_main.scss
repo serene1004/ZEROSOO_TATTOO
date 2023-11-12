@@ -10,9 +10,10 @@
     }
 
     h2 {
-        // font-size: 100px;
-        font-size: $fsz-title;
-        font-weight: 700;
+        position: relative;
+        font-family: 'Playfair Display', serif;
+        font-size: 80px;
+        font-weight: 400;
         line-height: normal;
     }
 }

@@ -8,6 +8,9 @@
 
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- js -->
+    <script src="./assets/js/style.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -43,23 +46,34 @@
         <div class="page">
             <section class="page_section page_visual">
                 <div class="inner">
-                    <h2>ARTIST<br>ZERO SOO<br>TATTOO</h2>
-
+                    <h2>
+                        <span>ARTIST</span>
+                        <span>ZERO SOO</span>
+                        <span class="dot">TATTOO</span>
+                    </h2>
+                    <div class="bg">
+                        <span class="bg_circle">
+                            <span class="blind">테두리만 있는 원</span>
+                        </span>
+                        <span class="bg_circle">
+                            <span class="blind">회색 원</span>
+                        </span>
+                    </div>
                 </div>
             </section>
             <section class="page_section page_portfolio">
                 <div class="inner">
-                    <h2>PORTFOLIO</h2>
+                    <h2 class="dot">PORTFOLIO</h2>
                 </div>
             </section>
             <section class="page_section page_design">
                 <div class="inner">
-                    <h2>DESIGN</h2>
+                    <h2 class="dot">DESIGN</h2>
                 </div>
             </section>
             <section class="page_section page_about">
                 <div class="inner">
-                    <h2>MEET THE ARTIST</h2>
+                    <h2 class="dot">MEET THE ARTIST</h2>
                 </div>
             </section>
         </div>
@@ -78,6 +92,9 @@
         </div>
     </div>
 </footer>
+    <script>
+        style.visualAnimation()
+    </script>
 
     </div>
 </body>
