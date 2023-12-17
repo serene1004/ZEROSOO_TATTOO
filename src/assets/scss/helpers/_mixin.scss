@@ -146,7 +146,7 @@
         @media screen and (max-width: $desktop) {
             @content;
         }
-    } @else if ($breakpoint == $laptap) {
+    } @else if ($breakpoint == $laptop) {
         @media screen and (max-width: $laptap) {
             @content;
         }

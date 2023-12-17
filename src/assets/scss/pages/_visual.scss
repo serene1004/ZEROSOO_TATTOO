@@ -6,6 +6,29 @@
     &_section {
         position: relative;
         z-index: 1;
+
+        .inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .flex_container {
+            margin-bottom: 40px;
+        }
+
+        .bg_txt {
+            font-family: 'Playfair Display', serif;
+            color: #f4f4f4;
+            font-size: 120px;
+            font-weight: 400;
+            line-height: normal;
+
+            &.dot {
+                &::after {
+                    color: inherit;
+                }
+            }
+        }
     }
 
     &_visual {
@@ -51,6 +74,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            height: 100%;
 
             &_circle {
                 position: absolute;
@@ -83,6 +108,97 @@
             }
         }
     }
+
+    &_portfolio,
+    &_design {
+        position: relative;
+        padding: 60px 0;
+
+        .bg {
+
+            &_circle {
+                width: 1390px;
+                height: 1390px;
+                background: $lightGray;
+            }
+        }
+    }
+
+    &_portfolio {
+        .bg_txt {
+            position: absolute;
+            bottom: 0;
+            right: 60px;
+        }
+    }
+    &_design {
+        .bg_txt {
+            position: absolute;
+            bottom: 0;
+            left: 60px;
+        }
+    }
+
+    &_about {
+        position: relative;
+        padding-bottom: 120px;
+
+        .twin-box {
+            height: 400px;
+        }
+
+        .zerosoo {
+            background: $grayDark;
+        }
+
+        .about_box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 24px;
+            gap: 20px;
+            background: $lightGray;
+
+            h4 {
+                width: 172px;
+                height: 25px;
+                background-image: url(../images/zerosoo_about.png);
+            }
+
+            p {
+                font-size: $fsz-large;
+                line-height: 1.2;
+            }
+
+            .btn.medium {
+                margin-top: auto;
+            }
+        }
+
+        .about_sns {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 16px;
+            font-weight: 500;
+
+            .ic_instagram {
+                width: 24px;
+                height: 24px;
+                background-image: url(../images/ic_instagram-gray.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+            }
+        }
+
+        .bg_txt {
+            position: absolute;
+            z-index: 0;
+            bottom: 0.5em;
+            right: 1.5em;
+        }
+    } 
 }
 
 .bg {
@@ -90,8 +206,6 @@
     z-index: 0;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
 
     &_circle {
         display: inline-flex;

@@ -1,0 +1,24 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin' as *;
+
+.img-card {
+
+    &_list {
+        display: flex;
+        gap: 40px;
+    }
+
+    &_item {
+        width: 370px;
+        height: 370px;
+    }
+
+    &_link {
+        width: 100%;
+        height: 100%;
+        
+        img {
+            border-radius: 12px;
+        }
+    }
+}
