@@ -1,7 +1,42 @@
 {% extends "base.html" %} {% block content %}
     {% import '../templates/header.html' as nav %} {{nav.active('portfolio')}}
     <main class="main">
-        
+        <section class="portfolio">
+            <div class="inner">
+                <div class="twin-box">
+                    <div class="twin-box_item flex fd-c">
+                        <h2 class="dot">PORTFOLIO</h2>
+                        <p class="para">If you like our portfolio, please contact us anytime.</p>
+                        <span class="sns">
+                            <i class="ic_instagram"></i>
+                            <em>zerosoo_tattoo</em>
+                        </span>
+                        <a href="#" class="btn medium">BOOKING APPOINTMENT</a>
+                    </div>
+                    <div class="twin-box_item w50">
+                        <div class="portfolio_img-box">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 포트폴리오 카드목록 -->
+                <ul class="img-card_list">
+                    <li class="img-card_item" role="button">
+                        <img src="./assets/images/portfolio01.png" alt="">
+                    </li>
+                    <li class="img-card_item" role="button">
+                        <img src="./assets/images/portfolio02.png" alt="">
+                    </li>
+                    <li class="img-card_item" role="button">
+                        <img src="./assets/images/portfolio03.png" alt="">
+                    </li>
+                    <li class="img-card_item" role="button">
+                        <img src="./assets/images/portfolio04.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </section>
     </main>
     {% include '../templates/footer.html' %}
 {% endblock %}

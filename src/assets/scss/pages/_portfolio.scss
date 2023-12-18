@@ -1,0 +1,37 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin' as *;
+
+.portfolio {
+
+    .inner {
+        @include inner;
+
+        .para {
+            color: $gray;
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+    }
+
+    .twin-box {
+        padding: 140px 0;
+        align-items: flex-start;
+
+        &_item {
+            gap: 24px;
+
+            .btn.medium{
+                width: 320px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &_img-box {
+        height: 780px;
+        background: $gray;
+        border-radius: 12px;
+    }
+}

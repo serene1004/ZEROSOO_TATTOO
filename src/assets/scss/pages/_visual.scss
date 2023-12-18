@@ -12,7 +12,7 @@
             z-index: 1;
         }
 
-        .flex_container {
+        .flex {
             margin-bottom: 40px;
         }
 
@@ -172,23 +172,6 @@
 
             .btn.medium {
                 margin-top: auto;
-            }
-        }
-
-        .about_sns {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 16px;
-            font-weight: 500;
-
-            .ic_instagram {
-                width: 24px;
-                height: 24px;
-                background-image: url(../images/ic_instagram-gray.svg);
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: contain;
             }
         }
 
