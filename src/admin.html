@@ -1,0 +1,28 @@
+{% extends "base.html" %} {% block content %}
+    {% import '../templates/header.html' as nav %} {{nav.active('')}}
+    <main class="main">
+        <section class="admin">
+            <div class="inner">
+                <div class="form_container">
+                    <div class="admin_logo">
+                        <span class="blind">logo</span>
+                    </div>
+                    <div class="form_area">
+                        <div class="inputbox">
+                            <input type="text" placeholder="아이디">
+                        </div>
+                        <div class="inputbox">
+                            <input type="password" placeholder="비밀번호">
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" id="rememberId">
+                            <label for="rememberId">아이디 저장</label>
+                        </div>
+                        <button type="button" class="btn btn_submit large">로그인</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% include '../templates/footer.html' %}
+{% endblock %}

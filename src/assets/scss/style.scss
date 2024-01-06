@@ -18,7 +18,9 @@
 @use './components/radiobox' as *;
 @use './components/textareabox' as *;
 @use './components/imgCard' as *;
+@use './components/modal' as *;
 
 // pages
 @use './pages/visual' as *;
 @use './pages/portfolio' as *;
+@use './pages/admin' as *;
