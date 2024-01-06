@@ -28,25 +28,17 @@
                         </a>
                     </div>
                     <ul class="img-card_list">
-                        <li class="img-card_item">
-                            <a href="portfolio.html" class="img-card_link">
-                                <img src="./assets/images/portfolio01.png" alt="">
-                            </a>
+                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
+                            <img src="./assets/images/portfolio01.png" alt="">
                         </li>
-                        <li class="img-card_item">
-                            <a href="portfolio.html" class="img-card_link">
-                                <img src="./assets/images/portfolio02.png" alt="">
-                            </a>
+                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
+                            <img src="./assets/images/portfolio02.png" alt="">
                         </li>
-                        <li class="img-card_item">
-                            <a href="portfolio.html" class="img-card_link">
-                                <img src="./assets/images/portfolio03.png" alt="">
-                            </a>
+                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
+                            <img src="./assets/images/portfolio03.png" alt="">
                         </li>
-                        <li class="img-card_item">
-                            <a href="portfolio.html" class="img-card_link">
-                                <img src="./assets/images/portfolio04.png" alt="">
-                            </a>
+                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
+                            <img src="./assets/images/portfolio04.png" alt="">
                         </li>
                     </ul>
                 </div>
@@ -66,25 +58,17 @@
                         </a>
                     </div>
                     <ul class="img-card_list">
-                        <li class="img-card_item">
-                            <a href="design.html" class="img-card_link">
-                                <img src="./assets/images/design01.png" alt="">
-                            </a>
+                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
+                            <img src="./assets/images/design01.png" alt="">
                         </li>
-                        <li class="img-card_item">
-                            <a href="design.html" class="img-card_link">
-                                <img src="./assets/images/design02.png" alt="">
-                            </a>
+                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
+                            <img src="./assets/images/design02.png" alt="">
                         </li>
-                        <li class="img-card_item">
-                            <a href="design.html" class="img-card_link">
-                                <img src="./assets/images/design03.png" alt="">
-                            </a>
+                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
+                            <img src="./assets/images/design03.png" alt="">
                         </li>
-                        <li class="img-card_item">
-                            <a href="design.html" class="img-card_link">
-                                <img src="./assets/images/design04.png" alt="">
-                            </a>
+                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
+                            <img src="./assets/images/design04.png" alt="">
                         </li>
                     </ul>
                 </div>
@@ -117,8 +101,10 @@
             </section>
         </div>
     </main>
+    {% include '../templates/imageDetail.html' %}
     {% include '../templates/footer.html' %}
     <script>
         style.visualAnimation()
+        utils.imageModal.init('imgDetail')
     </script>
 {% endblock %}
