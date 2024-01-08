@@ -4,17 +4,25 @@
 .img-card {
 
     &_list {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
         gap: 40px;
     }
 
     &_item {
-        width: 370px;
-        height: 370px;
+        border-radius: 12px;
+        overflow: hidden;
 
-        img {
-            border-radius: 12px;
-        }
+        // scale효과라도 있어야하는게 아닐까
+        // &:hover {
+        //     img {
+        //         transform: scale(1.1);
+        //     }
+        // }
+
+        // img {
+        //     transition: transform 0.15s ease-out;
+        // }
     }
 
     &_link {
