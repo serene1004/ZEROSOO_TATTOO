@@ -28,17 +28,25 @@
                         </a>
                     </div>
                     <ul class="img-card_list">
-                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
-                            <img src="./assets/images/portfolio01.png" alt="">
+                        <li class="img-card_item" role="button">
+                            <a href="portfolio.html" class="img-card_link">
+                                <img src="./assets/images/portfolio01.png" alt="">
+                            </a>
                         </li>
-                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
-                            <img src="./assets/images/portfolio02.png" alt="">
+                        <li class="img-card_item" role="button">
+                            <a href="portfolio.html" class="img-card_link">
+                                <img src="./assets/images/portfolio02.png" alt="">
+                            </a>
                         </li>
-                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
-                            <img src="./assets/images/portfolio03.png" alt="">
+                        <li class="img-card_item" role="button">
+                            <a href="portfolio.html" class="img-card_link">
+                                <img src="./assets/images/portfolio03.png" alt="">
+                            </a>
                         </li>
-                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
-                            <img src="./assets/images/portfolio04.png" alt="">
+                        <li class="img-card_item" role="button">
+                            <a href="portfolio.html" class="img-card_link">
+                                <img src="./assets/images/portfolio04.png" alt="">
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -58,17 +66,25 @@
                         </a>
                     </div>
                     <ul class="img-card_list">
-                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
-                            <img src="./assets/images/design01.png" alt="">
+                        <li class="img-card_item" role="button">
+                            <a href="design.html" class="img-card_link">
+                                <img src="./assets/images/design01.png" alt="">
+                            </a>
                         </li>
-                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
-                            <img src="./assets/images/design02.png" alt="">
+                        <li class="img-card_item" role="button">
+                            <a href="design.html" class="img-card_link">
+                                <img src="./assets/images/design02.png" alt="">
+                            </a>
                         </li>
-                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
-                            <img src="./assets/images/design03.png" alt="">
+                        <li class="img-card_item" role="button">
+                            <a href="design.html" class="img-card_link">
+                                <img src="./assets/images/design03.png" alt="">
+                            </a>
                         </li>
-                        <li class="img-card_item" role="button" data-modal="imgDetail" onclick="utils.imageModal.open()">
-                            <img src="./assets/images/design04.png" alt="">
+                        <li class="img-card_item" role="button">
+                            <a href="design.html" class="img-card_link">
+                                <img src="./assets/images/design04.png" alt="">
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -87,10 +103,10 @@
                             <h4>
                                 <span class="blind">zero soo</span>
                             </h4>
-                            <span class="sns">
+                            <a href="#" class="sns">
                                 <i class="ic_instagram"></i>
                                 <em>zerosoo_tattoo</em>
-                            </span>
+                            </a>
                             <p>Zero SOO is a versatile talent whose strengths include fashion tattoos and small, delicate motifs.</p>
                             <p>In addition to these skills, he has also discovered colorful, realistic motifs and is happy about every customer he can inspire with such a motif.</p>
                             <a href="#" class="btn medium">BOOKING APPOINTMENT</a>
@@ -101,10 +117,8 @@
             </section>
         </div>
     </main>
-    {% include '../templates/imageDetail.html' %}
     {% include '../templates/footer.html' %}
     <script>
         style.visualAnimation()
-        utils.imageModal.init('imgDetail')
     </script>
 {% endblock %}
