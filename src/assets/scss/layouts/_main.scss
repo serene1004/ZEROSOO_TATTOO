@@ -3,7 +3,7 @@
 
 .main {
     position: relative;
-    min-height: calc(100vh - 230px);
+    min-height: calc(100vh - 150px);
 
     .inner {
         
@@ -23,6 +23,12 @@
         gap: 12px;
         font-size: 16px;
         font-weight: 500;
+
+        &:hover {
+            .ic_instagram {
+                background-image: url(../images/ic_instagram.svg);
+            }
+        }
 
         .ic_instagram {
             width: 24px;

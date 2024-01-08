@@ -2,10 +2,12 @@
 @use '../helpers/mixin' as *;
 
 .header {
-    position: relative;
+    position: fixed;
     z-index: 10;
+    width: 100vw;
     height: 80px;
     padding: 10px;
+    background: $white;
     border-bottom: 1px solid #DFDFDF;
 
     .inner {
