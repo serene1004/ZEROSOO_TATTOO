@@ -20,7 +20,10 @@
 @use './components/imgCard' as *;
 @use './components/modal' as *;
 
+@use './components/swiper' as *;
+
 // pages
 @use './pages/visual' as *;
 @use './pages/portfolio' as *;
+@use './pages/design' as *;
 @use './pages/admin' as *;

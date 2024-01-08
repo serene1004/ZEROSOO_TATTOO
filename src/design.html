@@ -1,7 +1,104 @@
 {% extends "base.html" %} {% block content %}
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     {% import '../templates/header.html' as nav %} {{nav.active('design')}}
     <main class="main">
-        
+        <section class="design">
+            <div class="inner">
+                <div class="twin-box">
+                    <div class="twin-box_item flex fd-c">
+                        <h2 class="dot">DESIGN</h2>
+                        <p class="para">This design is available for reservation.</p>
+                        <a href="#" class="sns">
+                            <i class="ic_instagram"></i>
+                            <em>zerosoo_tattoo</em>
+                        </a>
+                        <a href="#" class="btn medium">BOOKING APPOINTMENT</a>
+                    </div>
+                    <div class="twin-box_item w50">
+                        <div class="design_img-box">
+                            <!-- swiper의 item은 게시글이 순차적으로 슬라이드 -->
+                            <div class="swiper">
+                                <div class="swiper-wrapper"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 포트폴리오 카드목록 -->
+                <ul class="img-card_list"></ul>
+            </div>
+        </section>
     </main>
+    {% include '../templates/imageDetail.html' %}
     {% include '../templates/footer.html' %}
+    <script>
+        utils.imageModal.init('imgDetail')
+
+        function createCustomElement(tagName, textContent = null, attributes = {}) {
+            const element = document.createElement(tagName);
+
+            if (textContent !== null) {
+                element.textContent = textContent;
+            }
+        
+            for (const [key, value] of Object.entries(attributes)) {
+                element.setAttribute(key, value);
+            }
+        
+            return element;
+        }
+
+        const filenameList = [
+            'design01.png',
+            'design02.png',
+            'design03.png',
+            'design04.png',
+            'design04.png',
+            'design03.png',
+            'design02.png',
+            'design01.png',
+            'design01.png',
+            'design02.png',
+            'design03.png',
+            'design04.png',
+        ];
+
+        // cardItem 생성
+        const cardList = document.querySelector('.img-card_list');
+        for (let i in filenameList) {
+            const cardItem = createCustomElement('div', null, {
+                class: 'img-card_item',
+                role: 'button',
+                'data-modal': 'imgDetail',
+                onclick: 'utils.imageModal.open()'
+            });
+            const cardImg = createCustomElement('img', null, {
+                src : `./assets/images/${filenameList[i]}`
+            });
+            cardItem.appendChild(cardImg);
+            cardList.appendChild(cardItem);
+        }
+
+        // swiperItem생성
+        const swiperWrapper = document.querySelector('.swiper-wrapper');
+        for (let i in filenameList) {
+            const swiperItem = createCustomElement('div', null, {
+                class: 'swiper-slide'
+            });
+            const swiperImg = createCustomElement('img', null, {
+                src : `./assets/images/${filenameList[i]}`
+            });
+            swiperItem.appendChild(swiperImg);
+            swiperWrapper.appendChild(swiperItem);
+        }
+
+        // swiper
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+            },
+        });
+    </script>
 {% endblock %}
