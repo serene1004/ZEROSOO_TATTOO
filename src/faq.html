@@ -1,6 +1,98 @@
 {% extends "base.html" %} {% block content %}
     {% import '../templates/header.html' as nav %} {{nav.active('faq')}}
     <main class="main">
-        
+        <section class="faq">
+            <div class="inner">
+                <div class="faq_top">
+                    <h2 class="dot">FAQ</h2>
+                    <p class="para">This is a list of frequently asked questions.</p>
+                    <a href="#" class="sns">
+                        <i class="ic_instagram"></i>
+                        <em>zerosoo_tattoo</em>
+                    </a>
+                    <a href="#" class="btn medium">BOOKING APPOINTMENT</a>
+                </div>
+                <div class="faq_bottom">
+                    <p class="bg_txt">FAQ</p>
+                    <ul class="accordion">
+                        <!-- <li class="accordion_item">
+                            <button type="button" class="accordion_title">타이틀<i class="ic_arrow-bottom"></i></button>
+                            <div class="accordion_content">컨텐츠</div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
+    {% include '../templates/footer.html' %}
+    <script>
+        const faqData = [
+            {
+                title: "How much does a tattoo cost?",
+                content: "It's usually $300 per hour. However, the exact cost of a tattoo depends on the size, complexity of the design, and other factors. A quote is provided during consultation, and the final price may change if there is a drastic change in size or overall design."
+            },
+            {
+                title: "How bad does it hurt to get a tattoo?",
+                content: "As everyone's pain tolerance is different, it's difficult to have a one range answer. While there is some discomfort experienced during the process, most clients feel that the resulting tattoo is well worth the process. There are many first time tattoo clients who state that it was much better than anticipated. Larger pieces that take all day may create discomfort in the 4th-5th hour."
+            },
+            {
+                title: "Will you tattoo any design that I bring to the studio?",
+                content: "Not necessarily. While we take pride in working with our clients to create a tattoo that brings their vision to life, not all designs are suitable for this medium. Another artist in our studio may be suggested if the design is more fitting for them. Any designs that include elements that our artists are not comfortable producing-for example, racist words or imagery - will not be allowed."
+            },
+            {
+                title: "When will I get to see my design? Will I be able to make any changes/corrections?",
+                content: "In most cases, designs will be sent 3 day prior to your appointment. You may request small changes to the design for the artist to make adjustments prior to the appointment. Complete design or theme changes must be informed no later than 1 week prior to the appointment for the artist to have enough time to redesign, otherwise the appointment will be stated as a cancellation and a new deposit will be required."
+            },
+            {
+                title: "Are there any aftercare requirements when getting a tattoo?",
+                content: "Yes, it's extremely important to treat your new tattoo properly in the days after completion. To learn more about good aftercare practices, please visit our aftercare page."
+            },           
+            { 
+                title: "Can people with health conditions get tattoos?",
+                content: "There are some health conditions that may be dangerous for an individual to be tattooed. These include immune system problems that limit your body's ability to heal itself. If pregnant, please consult with your doctor before reaching out. If you are in doubt about how a condition you have may impact your ability to get a tattoo, please speak directly with your healthcare provider before going any further."
+            },
+            {
+                title: "Do you do touch-ups? When do I need a touch-up? ",
+                content: "The artist will meticulously evaluate the need for touch-ups to ensure the best possible results. To assist in this process, please include well-lit photo images for the artist's reference in your email inquiry. Touch-ups can be scheduled approximately 1.5 months after your initial session and are complimentary if deemed necessary by the artist during the first 6 months. However, for touch-ups conducted after 6 months from the initial session, a nominal fee of $100 will apply, and a non-refundable $50 deposit is essential to secure your appointment. Should a touch-up be deemed necessary, the appointment will be scheduled based on the artist's availability for your convenience."
+            },
+        ];
+        
+        const accordion = document.querySelector('.accordion');
+
+        for (let i in faqData) {
+            const accordionItem = utils.createCustomElement('li', null, {
+                class: 'accordion_item'
+            });
+
+            const accordionTitle = utils.createCustomElement('button', faqData[i].title, {
+                class: 'accordion_title',
+                type: 'button'
+            });
+
+            const icon = utils.createCustomElement('i', null, {
+                class: 'ic_arrow-bottom',
+            });
+
+            const accordionContent = utils.createCustomElement('div', faqData[i].content, {
+                class: 'accordion_content'
+            });
+
+            accordionTitle.appendChild(icon);
+            accordionItem.appendChild(accordionTitle);
+            accordionItem.appendChild(accordionContent);
+            accordion.appendChild(accordionItem);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionTitle = document.querySelectorAll('.accordion_title');
+
+            accordionTitle.forEach(function (title) {
+                title.addEventListener('click', function () {
+                    const accordionItem = this.parentNode;
+
+                    accordionItem.classList.contains('active') ? accordionItem.classList.remove('active') : accordionItem.classList.add('active');
+                });
+            });
+        });
+    </script>
 {% endblock %}

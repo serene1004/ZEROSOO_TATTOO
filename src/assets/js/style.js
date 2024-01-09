@@ -75,4 +75,18 @@ const utils = {
             modalWrapper.classList.remove('on');
         }
     },
+    createCustomElement(tagName, textContent = null, attributes = {}) {
+        const element = document.createElement(tagName);
+
+        if (textContent !== null) {
+            element.textContent = textContent;
+        }
+    
+        for (const [key, value] of Object.entries(attributes)) {
+            element.setAttribute(key, value);
+        }
+    
+        return element;
+    },
+    
 }

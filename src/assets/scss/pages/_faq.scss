@@ -1,0 +1,112 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin' as *;
+
+.faq {
+
+    .inner {
+        @include inner;
+
+        .para {
+            color: $gray;
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .bg_txt {
+            font-family: 'Playfair Display', serif;
+            color: #f4f4f4;
+            font-size: 120px;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+
+    &_top {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        padding: 220px 0 80px;
+        gap: 24px;
+
+        .btn.medium{
+            width: 320px;
+            margin-top: 20px;
+        }
+    }
+
+    &_bottom {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 180px;
+        background: $lightGray;
+
+        .bg_txt {
+            position: absolute;
+            z-index: 1;
+            top: 0.25em;
+            left: 0.25em;
+        }
+    }
+
+    .accordion {
+        position: relative;
+        z-index: 2;
+        padding: 80px 0;
+    }
+
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        max-width: 960px;
+        width: 100%;
+        gap: 12px;
+        line-height: 1.2;
+
+        &_item {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid $grayLight;
+
+            &.active {
+
+                .accordion_title {
+
+                    i {
+                        transform: rotate(-90deg);
+                    }
+                }
+
+                .accordion_content {
+                    display: block;
+                }
+            }
+        }
+
+        &_title {
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 15px 0;
+            outline: 0;
+            font-size: 24px;
+            font-weight: 600;
+
+            i {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        &_content {
+            display: none;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+    }
+}

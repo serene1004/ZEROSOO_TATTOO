@@ -20,4 +20,9 @@
             background-image: url(../images/ic_kakaotalk.svg);
         }
     }
+
+    &_arrow-bottom {
+        background-image: url(../images/ic_chevron-right.svg);
+        transform: rotate(90deg);
+    }
 }
