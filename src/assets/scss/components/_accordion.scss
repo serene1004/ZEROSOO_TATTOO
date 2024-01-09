@@ -1,0 +1,54 @@
+@use '../helpers/variables' as *;
+@use '../helpers/mixin' as *;
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    width: 100%;
+    gap: 12px;
+    line-height: 1.2;
+
+    &_item {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $grayLight;
+
+        &.active {
+
+            .accordion_title {
+
+                i {
+                    transform: rotate(-90deg);
+                }
+            }
+
+            .accordion_content {
+                display: block;
+            }
+        }
+    }
+
+    &_title {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 15px 0;
+        outline: 0;
+        font-size: 24px;
+        font-weight: 600;
+
+        i {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &_content {
+        display: none;
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+}
