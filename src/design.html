@@ -35,20 +35,6 @@
     <script>
         utils.imageModal.init('imgDetail')
 
-        function createCustomElement(tagName, textContent = null, attributes = {}) {
-            const element = document.createElement(tagName);
-
-            if (textContent !== null) {
-                element.textContent = textContent;
-            }
-        
-            for (const [key, value] of Object.entries(attributes)) {
-                element.setAttribute(key, value);
-            }
-        
-            return element;
-        }
-
         const filenameList = [
             'design01.png',
             'design02.png',
@@ -67,13 +53,13 @@
         // cardItem 생성
         const cardList = document.querySelector('.img-card_list');
         for (let i in filenameList) {
-            const cardItem = createCustomElement('div', null, {
+            const cardItem = utils.createCustomElement('div', null, {
                 class: 'img-card_item',
                 role: 'button',
                 'data-modal': 'imgDetail',
                 onclick: 'utils.imageModal.open()'
             });
-            const cardImg = createCustomElement('img', null, {
+            const cardImg = utils.createCustomElement('img', null, {
                 src : `./assets/images/${filenameList[i]}`
             });
             cardItem.appendChild(cardImg);
@@ -83,10 +69,10 @@
         // swiperItem생성
         const swiperWrapper = document.querySelector('.swiper-wrapper');
         for (let i in filenameList) {
-            const swiperItem = createCustomElement('div', null, {
+            const swiperItem = utils.createCustomElement('div', null, {
                 class: 'swiper-slide'
             });
-            const swiperImg = createCustomElement('img', null, {
+            const swiperImg = utils.createCustomElement('img', null, {
                 src : `./assets/images/${filenameList[i]}`
             });
             swiperItem.appendChild(swiperImg);
