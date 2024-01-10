@@ -1,7 +1,7 @@
 @use '../helpers/variables' as *;
 @use '../helpers/mixin' as *;
 
-.faq {
+.policies {
 
     .inner {
         @include inner;
@@ -35,7 +35,6 @@
             margin-top: 20px;
         }
     }
-
     &_bottom {
         position: relative;
         display: flex;
@@ -53,9 +52,16 @@
         }
     }
 
-    .accordion {
+    &_info {
         position: relative;
         z-index: 2;
+        max-width: 960px;
+        width: 100%;
         padding: 80px 0;
+        font-size: 18px;
+
+        b {
+            font-weight: 700;
+        }
     }
 }
