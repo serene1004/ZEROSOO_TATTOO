@@ -1,0 +1,165 @@
+{% extends "base.html" %} {% block content %}
+    {% import '../templates/header.html' as nav %} {{nav.active('')}}
+    <main class="main">
+        <section class="booking">
+            <div class="inner">
+                <div class="booking_top">
+                    <h2 class="dot">BOOKING NOW</h2>
+                    <p class="para">Thank you for your reservation</p>
+                    <a href="#" class="sns">
+                        <i class="ic_instagram"></i>
+                        <em>zerosoo_tattoo</em>
+                    </a>
+                </div>
+                <div class="booking_bottom">
+                    <p class="bg_txt">BOOKING NOW</p>
+                    <div class="booking_form">
+                        <!-- form태그 사용해야하면 form_box의 div태그를 form으로 바꾸세요. -->
+                        <div class="form_box">
+                            <div class="form_item">
+                                <h4 class="form_title essential">Have you tattooed by ZERO SOO?</h4>
+                                <div class="form_content">
+                                    <div class="radiobox">
+                                        <input type="radio" id="yn01" name="yn">
+                                        <label for="yn01">YES</label>
+                                    </div>
+                                    <div class="radiobox">
+                                        <input type="radio" id="yn02" name="yn">
+                                        <label for="yn02">NO</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Tattoo Color Preference</h4>
+                                <div class="form_content">
+                                    <div class="radiobox" style="min-width: 120px;">
+                                        <input type="radio" id="type01" name="type">
+                                        <label for="type01">Only lining</label>
+                                    </div>
+                                    <div class="radiobox" style="min-width: 150px;">
+                                        <input type="radio" id="type02" name="type">
+                                        <label for="type02">Black and Gray</label>
+                                    </div>
+                                    <div class="radiobox">
+                                        <input type="radio" id="type03" name="type">
+                                        <label for="type03">Color</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Name</h4>
+                                <div class="form_content">
+                                    <div class="inputbox">
+                                        <input type="text" placeholder="Please enter your name.">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Phone number</h4>
+                                <div class="form_content">
+                                    <div class="inputbox">
+                                        <input type="text" placeholder="Please enter your mobile phone number.">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Email</h4>
+                                <div class="form_content">
+                                    <div class="inputbox">
+                                        <input type="text" placeholder="name@example.com">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Tattoo Description</h4>
+                                <div class="form_content">
+                                    <div class="textareabox">
+                                        <textarea placeholder="Please provide as much details about the tattoo you have in mind."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Preferred Date and Time</h4>
+                                <div class="form_content">
+                                    <div class="inputbox">
+                                        <input type="text" placeholder="Ex: 01/03/22 - 01/06/22 @ 10am - 8pm">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Tattoo Location</h4>
+                                <div class="form_content">
+                                    <div class="inputbox">
+                                        <input type="text" placeholder="Ex: Arm, Chest, Back">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title">Location Photo (optional)</h4>
+                                <div class="form_content">
+                                    <div class="filebox">
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Links to References</h4>
+                                <div class="form_content">
+                                    <div class="inputbox">
+                                        <input type="text" placeholder="Please attach reference links to Instagram/Pinterest, etc.">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Inspiration Photo 1 <span>(Please upload a reference photo or a drawing of your idea.)</span></h4>
+                                <div class="form_content">
+                                    <div class="filebox">
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Inspiration Photo 2 <span>(Please upload a reference photo or a drawing of your idea.)</span></h4>
+                                <div class="form_content">
+                                    <div class="filebox">
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item">
+                                <h4 class="form_title essential">Inspiration Photo 3 <span>(Please upload a reference photo or a drawing of your idea.)</span></h4>
+                                <div class="form_content">
+                                    <div class="filebox">
+                                        <input type="file">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form_item agree_submit">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="bookingAgree">
+                                    <label for="bookingAgree">I’m 18years oid or above</label>
+                                </div>
+
+                                <button type="button" class="btn medium" onclick="alert('Thank you! We will be in touch shortly.')">SUBMIT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    {% include '../templates/footer.html' %}
+{% endblock %}
