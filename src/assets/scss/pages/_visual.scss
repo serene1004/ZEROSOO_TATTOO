@@ -12,10 +12,6 @@
             z-index: 1;
         }
 
-        .flex {
-            margin-bottom: 40px;
-        }
-
         .bg_txt {
             font-family: 'Playfair Display', serif;
             color: #f4f4f4;
@@ -122,6 +118,14 @@
                 background: $lightGray;
             }
         }
+
+        &_header {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
     }
 
     &_portfolio {
@@ -142,6 +146,13 @@
     &_about {
         position: relative;
         padding-bottom: 120px;
+
+        &_header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
 
         .twin-box {
             height: 400px;
