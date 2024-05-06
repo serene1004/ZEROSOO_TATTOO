@@ -20,6 +20,8 @@
         align-items: flex-start;
 
         &_item {
+            display: flex;
+            flex-direction: column;
             gap: 24px;
 
             .btn.medium{

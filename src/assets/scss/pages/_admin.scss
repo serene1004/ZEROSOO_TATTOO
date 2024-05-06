@@ -7,13 +7,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: calc(100vh - 230px);
+        height: calc(100vh - 150px);
         @include inner;
+        padding-top: 80px;
     }
 
     &_logo {
-        width: 214px;
-        height: 73px;
+        width: 171px;
+        height: 72px;
         background-image: url(../images/logo.svg);
         background-repeat: no-repeat;
         background-position: center center;
